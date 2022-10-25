@@ -1,0 +1,15 @@
+<h1>{{schedulingDate | date}}</h1>
+<ul cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <li class="example-box"
+      *ngFor="let event of events; let i = index"
+      cdkDrag
+      cdkDragLockAxis="y">
+    <div class="time-range">{{hours[i].name}}</div>
+    <div
+      class="event-name">{{event ? event.name : ''}}</div>
+    <div class="buttons" *ngIf="event">
+      <button class="edit" (click)="onEdit(event)">Edit</button>
+      <button class="delete" (click)="onDelete(event)">Delete</button>
+    </div>
+  </li>
+</ul>

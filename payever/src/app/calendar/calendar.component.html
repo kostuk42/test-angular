@@ -1,0 +1,28 @@
+<div class="calendar-wrapper">
+  <div class="calendar">
+    <mat-calendar
+      #calendar
+      (selectedChange)="dateChanged($event)"
+      [dateClass]="dateClass()"
+
+      [(selected)]="selectedDate"
+    >
+    </mat-calendar>
+    <button class="add-event"
+            (click)="addEvent()"
+    >
+      Add event
+    </button>
+  </div>
+
+  <app-scheduler
+    [schedulingDate]="currentDate"
+    (eventsChanged)="onEventChanged($event)"
+    class="scheduler">
+  </app-scheduler>
+</div>
+
+
+
+
+

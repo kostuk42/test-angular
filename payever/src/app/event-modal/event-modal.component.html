@@ -1,0 +1,13 @@
+<mat-dialog-content class="mat-typography content">
+  <H4>Event details</H4>
+  <label>Event name:</label>
+  <input type="text" [(ngModel)]="name" />
+  <label>Event start time:</label>
+  <input type="time" [(ngModel)]="time" />
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+  <button mat-button mat-dialog-close (click)="onSubmit()">OK</button>
+</mat-dialog-actions>
+

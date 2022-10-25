@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-calendar-body-cell.highlight > .mat-calendar-body-cell-content,
+.mat-calendar-body-cell.highlight:hover > .mat-calendar-body-cell-content,
+.mat-calendar-body-cell.highlight > .mat-calendar-body-cell-content:hover {
+  border-color: yellow;
+  background-color: yellow;
+}
