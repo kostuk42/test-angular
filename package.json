@@ -1,12 +1,15 @@
 {
-  "name": "payever",
+  "name": "events-calendar",
   "version": "0.0.0",
+  "homepage": "http://kostuk42.github.io/test-angular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +23,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "gh-pages": "^6.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
